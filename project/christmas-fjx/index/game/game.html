@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>谁是王者·人气嘉宾为你发卡</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="game.css">
+<link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="snow">
+		<div class="all">
+			<!-- 主体部分为左中右布局 -->
+			<!-- 左侧部分字体和图片为上下布局 -->
+			<div class="leftImg item">
+				<div><img src="ui.img/top-left.png" style="width:200px; height:90px"></div>
+				<p class="p1">Cool~</p>
+				<div><img id="left0" style="width: 130px;
+    height: 130px;" src="ui.img/left0.png"></div>
+			</div>
+			<!-- 中间部分为游戏面板 -->
+			<div class="game item">
+				<div class="container">
+					<ul class="deck" id="deck">
+					</ul>
+				</div>
+			</div>
+			<!-- 右侧次要部分为上下五部分布局 -->
+			<div class="ui item">
+
+				<div class="text0 item1">
+					<img src="ui.img/top-right.png" style="width:300px; height:90px">
+					<p class="p2">匹配游戏</p>
+				</div>
+
+				<div class="item1"><button><span class="moves">0</span> Moves</button>
+					<button class="restart" onclick="run()">
+						Restart
+					</button>
+				</div>
+
+				<p class="p3 item1">神秘通道→</p>
+
+				<p class="p4 item1">Good!</p>
+				<div class="item1"><img id="right0" src="ui.img/right0.png" style="width: 130px;
+    height: 130px;"></div>
+			</div>
+		</div>
+	</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="game.js"></script>
+	<!-- 游戏素材来源：站长素材 http://sc.chinaz.com/-->
+
+	<!-- 音效素材 -->
+<script src="https://cdn.bootcss.com/howler/2.1.1/howler.min.js"></script>
+
+	<!-- 文字动画特效：https://github.com/jschr/textillate -->
+<script src="https://cdn.bootcss.com/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+<script src="https://cdn.bootcss.com/textillate/0.4.0/jquery.textillate.min.js"></script>
+<script src="https://cdn.bootcss.com/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+
+	<script src="main.js"></script>
+
+	<script>
+		//跳转到详情页面
+		$(".p3").on('click', function () {
+			window.location.href = '../chatbot/chatbot.html';
+		});
+	</script>
+	<!-- 适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。 -->
+
+</body>
+
+</html>

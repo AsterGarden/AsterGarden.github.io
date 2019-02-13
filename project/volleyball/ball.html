@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排球少年！</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/botui/0.3.7/botui.min.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+        #feather {
+            animation: feather 1s linear 0s infinite;
+        }
+
+        .swiper-container {
+            width: 1200px;
+            height: 680px;
+        }
+
+        .swiper-slide img {
+            width: 1200px;
+            height: 675px;
+            text-align: center;
+        }
+
+        /* 排球少年，飞吧！ */
+        .p1 {
+            color: rgb(248, 144, 8);
+            font-size: 80px;
+            font-weight: 900;
+            text-shadow: 5px 5px 10px rgb(15, 15, 15);
+            font-style: italic;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .7);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .p1 :hover {
+            color: rgb(15, 15, 15);
+            text-shadow: 5px 5px 10px rgb(245, 168, 3);
+        }
+
+        /* 剧情简介部分 */
+        .intro {
+            width: 100%;
+            height: 320px;
+        }
+
+        .p2 {
+            color: rgb(248, 144, 8);
+            font-size: 50px;
+            font-weight: 900;
+            text-shadow: 5px 5px 10px rgb(15, 15, 15);
+            font-style: italic;
+            text-align: center;
+            background-color: rgba(255, 255, 255, .7);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .p2:hover {
+            color: rgb(15, 15, 15);
+            text-shadow: 5px 5px 10px rgb(245, 168, 3);
+        }
+
+        .p3 {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 35px;
+            text-align: justify;
+            margin-right: 3%;
+            margin-left: 3%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .juqing {
+            margin-top: 20px;
+        }
+
+        .end {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* 台词部分 */
+        .lines-part {
+            margin-left: 3%;
+            margin-right: 3%;
+            width: 94%;
+            height: 800px;
+            background-image: url("http://wx4.sinaimg.cn/large/95c4147fly1fyfu7vaierj21hc0m8npe.jpg");
+            background-size: cover;
+        }
+
+        .lines {
+            margin-left: 300px;
+        }
+
+        .botui-container {
+            margin-right: 0;
+            margin-left: 0;
+            width: 800px;
+            height: 750px;
+            font-size: 16px;
+            letter-spacing: 2px;
+            line-height: 3px;
+            background-color: transparent;
+        }
+
+        .botui-app-container {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .botui-messages-container {
+            padding: 10px 20px
+        }
+
+        .botui-actions-container {
+            padding: 10px 20px
+        }
+
+        .botui-message {
+            min-height: 30px
+        }
+
+        .botui-message-content {
+            padding: 7px 13px;
+            border-radius: 15px;
+            color: #595a5a;
+            background-color: #ebebeb
+        }
+
+        .botui-message-content.human {
+            color: #f7f8f8;
+            background-color: #919292
+        }
+
+        .botui-message-content.text {
+            line-height: 1.3
+        }
+
+        .botui-message-content.loading {
+            background-color: rgba(206, 206, 206, .5);
+            line-height: 1.3;
+            text-align: center
+        }
+
+        .botui-message-content.embed {
+            padding: 5px;
+            border-radius: 5px
+        }
+
+        .botui-message-content-link {
+            color: #919292
+        }
+
+        .botui-actions-text-input {
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            padding: 5px 7px;
+            font-family: "Open Sans", sans-serif;
+            background-color: transparent;
+            color: #595a5a;
+            border-bottom: 1px solid #919292
+        }
+
+        .botui-actions-text-submit {
+            color: #fff;
+            width: 30px;
+            padding: 5px;
+            height: 30px;
+            line-height: 1;
+            border-radius: 50%;
+            border: 1px solid #919292;
+            background: #777979
+        }
+
+        .botui-actions-buttons-button {
+            border: 0;
+            color: #fff;
+            line-height: 1;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 7px 15px;
+            border-radius: 4px;
+            font-family: "Open Sans", sans-serif;
+            background: #777979;
+            box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, .25)
+        }
+
+        .botui-actions-text-select {
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            padding: 5px 7px;
+            font-family: "Open Sans", sans-serif;
+            background-color: transparent;
+            color: #595a5a;
+            border-bottom: 1px solid #919292
+        }
+
+        .botui-actions-text-searchselect {
+            border: 0;
+            outline: 0;
+            border-radius: 0;
+            padding: 5px 7px;
+            font-family: "Open Sans", sans-serif;
+            background-color: transparent;
+            color: #595a5a;
+            border-bottom: 1px solid #919292
+        }
+
+        .botui-actions-text-searchselect .dropdown-toggle {
+            border: none !important
+        }
+
+        .botui-actions-text-searchselect .selected-tag {
+            background-color: transparent !important;
+            border: 0 !important
+        }
+
+        .slide-fade-enter-active {
+            transition: all .3s ease
+        }
+
+        .slide-fade-enter,
+        .slide-fade-leave-to {
+            opacity: 0;
+            transform: translateX(-10px)
+        }
+
+        .dot {
+            width: .5rem;
+            height: .5rem;
+            border-radius: .5rem;
+            display: inline-block;
+            background-color: #919292
+        }
+
+        .dot:nth-last-child(1) {
+            margin-left: .3rem;
+            animation: loading .6s .3s linear infinite
+        }
+
+        .dot:nth-last-child(2) {
+            margin-left: .3rem;
+            animation: loading .6s .2s linear infinite
+        }
+
+        .dot:nth-last-child(3) {
+            animation: loading .6s .1s linear infinite
+        }
+
+        @keyframes loading {
+            0% {
+                transform: translate(0, 0);
+                background-color: #ababab
+            }
+
+            25% {
+                transform: translate(0, -3px)
+            }
+
+            50% {
+                transform: translate(0, 0);
+                background-color: #ababab
+            }
+
+            75% {
+                transform: translate(0, 3px)
+            }
+
+            100% {
+                transform: translate(0, 0)
+            }
+        }
+    </style>
+</head>
+
+<body id="feather">
+
+    <div class="header">
+        <div class="p1">ハイキュー!! 飛べ!</div>
+    </div>
+    <div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="http://wx3.sinaimg.cn/large/95c4147fly1fyfsif2xjdj21hc0u0wkn.jpg"></div>
+                <div class="swiper-slide"><img src="http://wx1.sinaimg.cn/large/95c4147fly1fyfsif170pj21hc0u0wjz.jpg"></div>
+                <div class="swiper-slide"><img src="http://wx4.sinaimg.cn/large/95c4147fly1fyfsieu4ogj21hc0u045l.jpg"></div>
+                <div class="swiper-slide"><img src="http://wx2.sinaimg.cn/large/95c4147fly1fyfsifhvcjj21hc0u017y.jpg"></div>
+                <div class="swiper-slide"><img src="http://wx1.sinaimg.cn/large/95c4147fly1fyfsiez6qoj21hc0u0wja.jpg"></div>
+                <div class="swiper-slide"><img src="http://wx1.sinaimg.cn/large/95c4147fly1fyfsigxh9rj21hc0u0x6p.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="intro">
+        <p class="p2">剧情简介</p>
+        <div class="juqing">
+            <p class="p3">小时候，日向翔阳从电视上看见排球比赛，乌野高中的一名小个子在球场上的英姿，简直就是个“小巨人”，翔阳对此印象非常深刻，并开始迷上排球，一直想成为“小巨人”一样的人。初中时排球社不够人数，只好默默等待，后来在终于有新成员后，参与了第一次也是最后一次的比赛，不幸对决了最强队伍，结果当然落败。单凭自己的话，是绝对无法看见那景色的，不是自己一人的话，或许就能看见了…...为了能够打出“胜利”的比赛，翔阳努力考入乌野高中，为了实现成为“小巨人”的排球梦想！</p>
+        </div>
+    </div>
+    <div class="lines-part">
+        <div class="lines">
+            <div id="app">
+                <div class="botui-app-container" id="lines">
+                    <bot-ui></bot-ui>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p1 end ">
+        <p>再来一球!</p>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.21/vue.min.js"></script>
+    <!-- 文字 -->
+    <script src="https://cdn.bootcss.com/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdn.bootcss.com/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+    <script src="https://cdn.bootcss.com/textillate/0.4.0/jquery.textillate.min.js"></script>
+
+    <!-- 黑羽飘落-->
+    <script src="https://cdn.bootcss.com/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/JQuery-Snowfall/1.7.4/snowfall.min.js"></script>
+    <!-- 图片 -->
+    <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+    <!-- 台词 -->
+    <script src="https://cdn.bootcss.com/botui/0.3.7/botui.js"></script>
+
+    <script>
+        //黑羽
+        $(document).snowfall('clear');
+        $(document).snowfall({
+            image: "https://static1.bcjiaoyu.com/4a5c3c338fa876a5ead642296bb34bd0_k.-266x268",
+            flakeCount: 10,
+            minSpeed: 1,
+            minSize: 15,
+            maxSize: 20,
+            round: true,
+        });
+        $(document).snowfall({
+            image: "https://static1.bcjiaoyu.com/4a5c3c338fa876a5ead642296bb34bd0_k.-151x151",
+            flakeCount: 10,
+            minSpeed: 1,
+            minSize: 15,
+            maxSize: 29,
+            round: true,
+        });
+        $(document).snowfall({
+            image: "https://static1.bcjiaoyu.com/4a5c3c338fa876a5ead642296bb34bd0_k.-140x140",
+
+            flakeCount: 10,
+            minSpeed: 0.3,
+            minSize: 12,
+            maxSize: 15,
+            round: true,
+        });
+        $(document).snowfall({
+            image: "https://static1.bcjiaoyu.com/4a5c3c338fa876a5ead642296bb34bd0_k.-98x98",
+
+            flakeCount: 10,
+            minSpeed: 0.4,
+            minSize: 12,
+            maxSize: 30,
+            round: true,
+        });
+
+        //文字
+        $(".p1").textillate({
+            loop: true,
+            minDisplayTime: 2000,
+            initialDelay: 0,
+            autoStart: true,
+            inEffects: [],
+            outEffects: [],
+            in: {
+                effect: 'flip',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+            },
+            out: {
+                effect: 'bounce',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+            },
+            type: 'char'
+        });
+
+        $(".p3").textillate({
+            loop: true,
+            minDisplayTime: 2000,
+            initialDelay: 0,
+            autoStart: true,
+            inEffects: [],
+            outEffects: [],
+            in: {
+                effect: 'fadeInLeft',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+            },
+            out: {
+                effect: 'bounceOut',
+                delayScale: 1.5,
+                delay: 50,
+                sync: false,
+                shuffle: false,
+                reverse: false,
+            },
+            type: 'char'
+        });
+        //轮播图
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            spaceBetween: 30,
+            centeredSlides: 'center',
+            autoplay: {
+                delay: 500,
+                disableOnInteraction: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        //台词
+        var botui = new BotUI('lines');
+
+        var rixiang = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=e07d16ff7af0f736ccf344536b3cd87c/342ac65c10385343b0eba7a19113b07eca80880d.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '不想输，需要理由吗？',
+                });
+            }).then(selection)
+        }
+
+        var yingshan = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=ad7d415734d12f2eda08a6322eabbe07/c995d143ad4bd113a56197b258afa40f4afb0585.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '只要有我在，你就是最强的。',
+                });
+            }).then(selection)
+        }
+
+        var dadi = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=edb3b43b85d6277ffd1f3a6a49517455/b90e7bec54e736d1459cac8899504fc2d46269a6.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '现在正是，那个机会来临的时刻。',
+                });
+            }).then(selection)
+        }
+
+        var jianyuan = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2c5a8a8dfadcd100d991f07313e22c75/622762d0f703918fb7711d4a533d269758eec489.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '下一球，我们也会继续的。',
+                });
+            }).then(selection)
+        }
+
+        var xigu = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=5d2b99e496eef01f591910978197f240/b64543a98226cffcf7b39f32bb014a90f703ea91.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '大家的背后，由我来守护。白鸟泽有牛若的话，那么乌野就有我。',
+                });
+            }).then(selection)
+        }
+
+        var yuedao = function () {
+            botui.message.bot({
+                delay: 1000,
+                type: 'html',
+                content: '<img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=bddc5e86aeaf2eddc0fc41bbec796a8c/aa18972bd40735fa2d186e399c510fb30e240841.jpg">',
+            }).then(function () {
+                return botui.message.add({
+                    delay: 1000,
+                    content: '有这种想法，简直太傻了，我又不是日向，居然会想要战斗到最后一刻。',
+                });
+            }).then(selection)
+        }
+
+        var selection = function () {
+            botui.message.bot({
+                delay: 1000,
+                content: '经典台词集锦'
+            }).then(function () {
+                return botui.action.button({
+                    delay: 1000,
+                    action: [{
+                        text: '日向翔阳 ',
+                        value: 0
+                    }, {
+                        text: '影山飞雄',
+                        value: 1
+                    }, {
+                        text: "泽村大地",
+                        value: 2
+                    }, {
+                        text: "菅原孝支",
+                        value: 3
+                    }, {
+                        text: "西谷夕",
+                        value: 4
+                    }, {
+                        text: "月岛萤 ",
+                        value: 5
+                    }],
+                })
+            }).then(function (res) {
+                var select = res.value;
+                switch (select) {
+                    case 0:
+                        rixiang();
+                        break;
+                    case 1:
+                        yingshan();
+                        break;
+                    case 2:
+                        dadi();
+                        break;
+                    case 3:
+                        jianyuan();
+                        break;
+                    case 4:
+                        xigu();
+                        break;
+                    case 5:
+                        yuedao();
+                        break;
+                }
+            })
+        }
+        var begin = function () {
+            botui.message.bot({
+                delay: 1000,
+                content: '欢迎来到乌野高中！'
+            }).then(selection)
+        }
+
+        begin();
+    </script>
+</body>
+
+</html>
