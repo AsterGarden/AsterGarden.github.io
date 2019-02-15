@@ -7,16 +7,16 @@ span{
 }
 
 .jumbotron{
-	background-color: #CECEFF;
+	background-color: rgb(247, 205, 170);
 	opacity: .7;
 }
 .jumbotron .glyphicon-send{
-	color: #6AB5FF;
+	color: rgb(117, 208, 250);
 	font-size:50px;
 }
 
 .logo{
-	color: #FFC14B;
+	color: rgb(75, 219, 255);
 	opacity:.8 ;
 }
 
@@ -67,7 +67,10 @@ footer span{
 	padding-bottom: 50px;
 }
 
-
+.text-li{
+	text-align: left;
+	font-size: 18px;
+}
 
 
 
