@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Django项目]]></title>
+    <url>%2F2019%2F02%2F12%2FDjango%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[在项目开始之前，需了解以下知识： 安装Python 3.x.x Django安装 验证Python是否安装成功 快捷键”Ctrl”+”Win”,输入cmd,按下回车键 输入python，按下回车 如下图所示，Python安装成功。 安装pip 按需从pip官网下载 相关配置参考文档 安装Django打开命令行]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>后端</tag>
+        <tag>Python</tag>
+        <tag>Django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Node.js聊天室项目]]></title>
+    <url>%2F2019%2F02%2F12%2FNode-js%E8%81%8A%E5%A4%A9%E5%AE%A4%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[前端资料汇总]]></title>
+    <url>%2F2019%2F02%2F12%2F%E5%89%8D%E7%AB%AF%E8%B5%84%E6%96%99%E6%B1%87%E6%80%BB%2F</url>
+    <content type="text"><![CDATA[前端资料汇总 w3school 在线教程 Less.js Sass jQuery Bootstrap Vue.js React webpack git]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[前端资料汇总]]></title>
+    <url>%2F2019%2F01%2F08%2FHexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%AD%A5%E9%AA%A4%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端 -hexo</tag>
+      </tags>
+  </entry>
+</search>
