@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>快读</title>
+    <title>Document</title>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <style>
         body {
-            background-color: rgb(231, 248, 231);
+            background-color: rgb(202, 233, 202);
         }
 
         div {
@@ -18,6 +18,7 @@
 
         #p {
             font-size: 100px;
+            color:rgba(0, 0, 0, 0.7);
             text-align: center;
         }
 
@@ -32,7 +33,7 @@
     <div id="box">
         <input type="button" value="开始" onclick="start()" />
         <input type="button" value="重新开始" onclick="restart()" />
-        <input type="button" value="停止" onclick="stop()" /><br>
+        <input type="button" value="暂停" onclick="stop()" /><br>
         <input type="text" id="speed" value="600">
         <input type="button" value="确定" onclick="changeSpeed()" /><br>
         <input type="file" accept="text/plain" onchange="openFile(event)"><br>
@@ -52,7 +53,7 @@
             var reader = new FileReader();
             reader.onload = function () {
                 if (reader.result) {
-                    //读取文件内容
+                    //读取文档内容
                     x = reader.result;
                 }
             };
@@ -62,7 +63,7 @@
         function show() {
             var p = document.getElementById("p");
             x=x.replace(/[\r\n]/g,"");
-            p.innerText = x.substr(i, 3);
+            p.innerText = x.substr(i, 4);
             i++;
         }
 
