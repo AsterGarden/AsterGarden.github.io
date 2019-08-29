@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("img/bggame.jpg");
+    background-size: cover;
+    font-family: 'Coda', cursive;
+    background-repeat: no-repeat;
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
+}
+
+#snow2 {
+    height: 100%;
+    width: 100%;
+}
+
+/* 主体部分，左中右布局，水平方向，按照黄金分割比例布置 */
+.all {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    flex: 1;
+}
+
+.game {
+    flex: 0 0 50%;
+}
+
+/* 左侧部分字体和图片为上下布局，垂直方向 */
+.leftImg {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.p1 {
+    flex: 0 0 20%;
+}
+
+/* 中间部分为游戏面板 */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 游戏开始前图片隐藏 */
+/* 原本设置了图片不可见visibility: hidden;经测试，容易出现图片加载失败的情况，
+因此设置width: 0;若加载失败是可见的 */
+img {
+    width: 0;
+}
+
+.deck {
+    width: 640px;
+    min-height: 600px;
+    background: linear-gradient(160deg, hsla(212, 96%, 42%, 0.1) 0%, hsla(212, 93%, 61%, 0.1) 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(68, 73, 46, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 10px;
+}
+
+.deck .card {
+    height: 100px;
+    width: 100px;
+    background: hsla(61, 82%, 68%, 0.767);
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(53, 71, 87, 0.5);
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+}
+
+.deck .card.open {
+    transform: rotateY(360deg);
+    background: rgba(28, 90, 56, .7);
+    cursor: default;
+    transition: transform 0.3s;
+}
+
+.deck .card.show img {
+    height: 60px;
+    width: 60px
+}
+
+.deck .card.match {
+    cursor: default;
+    background: rgba(243, 245, 125, 0.1);
+    font-size: 50px;
+    animation: fbig 0.3s alternate;
+}
+
+@keyframes fbig {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(1.1)
+    }
+}
+
+/* 右侧次要部分为上下五部分布局，垂直方向 */
+.ui {
+    display: flex;
+    flex-direction: column;
+}
+
+.item1 {
+    flex: 1;
+    text-align: center;
+}
+
+.text0 {
+    flex: 0 0 30%;
+}
+
+button {
+    flex: 0 0 10%;
+}
+/* 字体样式 */
+.p1,.p4 {
+    font-weight: 600;
+    font-size: 40px;
+    padding-top: 50px;
+    color: rgb(255, 134, 32);
+    text-shadow: 5px 5px 5px rgb(245, 224, 217);
+}
+
+.p2 {
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 20px;
+    color: rgba(28, 90, 56, .7);
+    text-shadow: 5px 5px 5px rgb(245, 224, 217);
+    letter-spacing: 5px;
+}
+
+.p3 {
+    font-weight: 600;
+    font-size:30px;
+    padding-top: 20px;
+    letter-spacing: 5px;
+    font-style: italic;
+    color: rgba(197, 217, 230, 0.7);
+    text-shadow: 0px 0px 20px rgb(252, 250, 247);
+    cursor: pointer;
+}
+.p3 :hover{
+     color: rgba(119, 188, 253, 0.7);
+     text-shadow: 0px 0px 20px rgb(252, 250, 247);
+}
+
+/* 按钮样式 */
+button {
+    background: rgba(197, 217, 230, 0.7);
+    color: rgba(242, 184 40, .7);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+button span{
+    color:red;
+}
+
+.restart {
+    margin-left:50px;
+}

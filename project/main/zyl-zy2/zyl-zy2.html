@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="zyl-zy2.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#myNav">
+    <!-- 设计思路：设置两边，左边3为affix,右边9为内容 -->
+    <div class="container">
+        <div class="jumbotron text-center" id="head">
+            <h1>欢迎你</h1>
+            <p>这是朱一龙的主页</p>
+            <span class="glyphicon glyphicon-send"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-3" id="myNav">
+                <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="125">
+                    <li><a href="#team">介绍</a></li>
+                    <li><a href="#works">图片集</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </div> <!-- col-md-3 -->
+
+            <div class="col-md-9">
+                <div id="team">
+                    <div class="col-md-12">
+                        <h1><span class="glyphicon glyphicon-apple logo"></span>介绍</h1>
+                        <hr>
+                    </div>
+                    <div class="container-fluid bg-blue">
+                        <div class="col-md-6 text-center">
+                            <h3 class=>朱一龙</h3><br>
+                            <a data-toggle="modal" data-target="#modalOne">
+                                <img src="https://wx1.sinaimg.cn/mw1024/95c4147fgy1fu4vn6azyij205k05kab6.jpg" class="img-circle team">
+                            </a>
+                            <!-- 模态框 -->
+                            <div class="modal fade" id="modalOne">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            不离不弃，未来可期。
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                                关闭
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="text-li">
+                                <p>个人简介</p>
+                                <ul>
+                                    <li>朱一龙 Zhu Yi Long</li>
+                                    <li>中国 湖北武汉 演员</li>
+                                    <li>北京电影学院2006级表演系</li>
+                                    <li>1988年4月16日 白羊座</li>
+                                    <li>O型 180cm 62kg</li>
+                                </ul>
+                                <p>获奖记录</p>
+                                <ul>
+                                    <li>电视剧南方盛典 年度男配角 </li>
+                                    <li>亚洲影响力东方盛典 最具潜力男演员 </li>
+                                    <li>2018微博电影之夜 微博人气演员</li>
+                                    <li>福布斯中国2018年30岁以下精英榜</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- container -->
+                </div> <!-- team -->
+
+                <div id="works">
+                    <div class="col-md-12">
+                        <h1><span class="glyphicon glyphicon-camera logo"></span>图片集</h1>
+                        <hr>
+                    </div>
+
+                    <!-- 标签页 -->
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#animals" data-toggle="tab"> 萌宠</a>
+                        </li>
+                        <li>
+                            <a href="#view" data-toggle="tab"> 风景</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- 动物 折叠插件 -->
+
+                        <div id="animals" class="tab-pane fade in active">
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#1" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx4.sinaimg.cn/mw690/005zylJJgy1g05548z4jpj31qt1qtnki.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="1">
+                                    猫
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#2" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx3.sinaimg.cn/mw690/bde8475dly1fxdpj0g6ytj22c02c0b2a.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="2">
+                                    猫
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#3" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx1.sinaimg.cn/mw690/bde8475dly1fyemp083suj22c02c04qq.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="3">
+                                    猫
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#4" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx4.sinaimg.cn/mw690/bde8475dly1fzpg7mz70kj22c02c0b2a.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="4">
+                                    猫
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#5" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx3.sinaimg.cn/mw690/bde8475dly1fzpg7q7myyj22c02c0b2a.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="5">
+                                    猫
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <a href="#6" data-toggle="collapse">
+                                    <div class="thumbnail">
+                                        <img src="https://wx2.sinaimg.cn/mw690/6aaeb4b8gy1fyi4yntd33j20c80c83zf.jpg">
+                                    </div>
+                                </a>
+                                <div class="collapse text-center" id="6">
+                                    猫
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="view" class="tab-pane">
+                            <!-- data-placement控制显示位置 -->
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx3.sinaimg.cn/mw690/a7295e45gy1g03x5vcxy6j20xc0maq8e.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="left" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx1.sinaimg.cn/mw690/a7295e45gy1g03x5sn7kxj20xc0maqaa.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="right" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx1.sinaimg.cn/mw690/a7295e45gy1g03x5upj5fj20xc0ma0zy.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="top" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx3.sinaimg.cn/mw690/a7295e45gy1g03x5v9czxj20xc0magr7.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="bottom" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx1.sinaimg.cn/mw690/a7295e45gy1g03x5v9e8cj20xc0maq9m.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="left" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx2.sinaimg.cn/mw690/a7295e45gy1g03x61pa7yj20xc0math2.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="right" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx3.sinaimg.cn/mw690/a7295e45gy1g056r9cqn2j20mh0fhk0g.jpg">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-12">
+                                <div class="thumbnail" data-placement="" data-toggle="tooltip" title="梅花">
+                                    <img src="https://wx1.sinaimg.cn/mw690/a7295e45gy1g03x60b9cgj20xc0ljdlf.jpg">
+                                </div>
+                            </div>
+                        </div> <!-- view -->
+                    </div> <!-- tab-content -->
+                </div> <!-- works -->
+
+                <div id="contact" class="container-fluid bg-grey">
+                    <div class="col-md-12">
+                        <h1><span class="glyphicon glyphicon-cloud logo"></span>联系我们</h1>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p>工作事宜请按以下方式联系，非本人使用</p>
+                            <p><span class="glyphicon glyphicon-map-marker"></span> 北京市朝阳区</p>
+                            <p><span class="glyphicon glyphicon-phone"></span> +00 88416</p>
+                            <p><span class="glyphicon glyphicon-envelope"></span>zhuyilong@qq.com</p>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Name"
+                                        required>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="email" placeholder="E-mail"
+                                        required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <button class="btn btn-default pull-right" type="sunbmit">发送</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- contact -->
+
+            </div> <!-- col-md-9 -->
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+    <footer class="text-center">
+        <a class="up-arrow" href="#head" data-toggle="tooltip" title="回到顶部">
+            <span class="glyphicon glyphicon-chevron-up logo"></span>
+        </a>
+    </footer>
+
+    <script>
+        //  工具提示不是纯css插件，要使用js
+        $(function () {
+            $("[data-toggle='tooltip']").tooltip();
+        });
+    </script>
+</body>
+
+</html>

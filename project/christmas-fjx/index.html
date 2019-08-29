@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>豪华阵容·神秘天团踩点热舞</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index/snow/jquery.fallingsnow.css" />
+    <link rel="stylesheet" type="text/css" href="index/main.css" />
+</head>
+
+<body>
+    <div id="snow">
+        <div class="header">
+            <p class="p1">Merry Christmas</p>
+        </div>
+        <div class="body">
+            <div class="swiper-part">
+                <div class="two">
+                    <div class="left">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="index/img/0.png"></div>
+                                <div class="swiper-slide"><img src="index/img/1.png"></div>
+                                <div class="swiper-slide"><img src="index/img/2.png"></div>
+                                <div class="swiper-slide"><img src="index/img/3.png"></div>
+                                <div class="swiper-slide"><img src="index/img/4.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="index/img/0.png"></div>
+                                <div class="swiper-slide"><img src="index/img/1.png"></div>
+                                <div class="swiper-slide"><img src="index/img/2.png"></div>
+                                <div class="swiper-slide"><img src="index/img/3.png"></div>
+                                <div class="swiper-slide"><img src="index/img/4.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="index/img/0.png"></div>
+                            <div class="swiper-slide"><img src="index/img/1.png"></div>
+                            <div class="swiper-slide"><img src="index/img/2.png"></div>
+                            <div class="swiper-slide"><img src="index/img/3.png"></div>
+                            <div class="swiper-slide"><img src="index/img/4.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button>
+                <span class="p2">GAME START</span>
+            </button>
+        </div>
+    </div>
+    <canvas></canvas>
+
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 文字动画特效：https://github.com/jschr/textillate -->
+    <script src="https://cdn.bootcss.com/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdn.bootcss.com/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="https://cdn.bootcss.com/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+
+    <!-- 雪花特效：https://github.com/RayHyde/fallingsnow -->
+    <script src="index/snow/jquery.fallingsnow.min.js"></script>
+
+    <!-- 音效js库：https://github.com/goldfire/howler.js#documentation 
+        音效素材：站长之家http://www.chinaz.com/ -->
+    <script src="https://cdn.bootcss.com/howler/2.1.1/howler.min.js"></script>
+
+    <!--  鼠标粒子特效：http://down.admin5.com/-->
+    <script src="index/mouse.js"></script>
+
+    <script src="index/main.js"></script>
+
+    <!-- 圣诞老人跳舞效果:https://www.swiper.com.cn/ -->
+    <script src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            spaceBetween: 30,
+            centeredSlides: 'center',
+            autoplay: {
+                delay: 500,
+                disableOnInteraction: true,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
